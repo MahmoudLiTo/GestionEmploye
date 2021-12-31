@@ -23,14 +23,17 @@ namespace GestionEmploye.controller
         public void add(object obj)
         {
             string attributes = "(";
+            string values
             foreach (var prop in obj.GetType().GetProperties())
             {
                 if (prop.Name != "id")
                 {
                     attributes = attributes + prop.Name + ",";
                 }
-                prop.Name, prop.GetValue(obj);
             }
+            attributes = attributes.Substring(0, attributes.Length - 1);
+            attributes += ")";
+
         } 
 
 
