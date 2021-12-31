@@ -23,16 +23,27 @@ namespace GestionEmploye.controller
         public void add(object obj)
         {
             string attributes = "(";
-            string values
+            string values = "(";
             foreach (var prop in obj.GetType().GetProperties())
             {
                 if (prop.Name != "id")
                 {
-                    attributes = attributes + prop.Name + ",";
+                    attributes += prop.Name + ",";
+                    values +=  prop.GetValue(obj, null)+",";
+
+
                 }
             }
             attributes = attributes.Substring(0, attributes.Length - 1);
             attributes += ")";
+            values = values.Substring(0, values.Length - 1);
+            values += ")";
+            string query = "insert into" + obj.GetType().Name +attributes + "values" + values;
+            SqlCommand cmd = new SqlCommand(query, cnx);
+            cnx.Open();
+            cmd.ExecuteNonQuery();
+
+
 
         } 
 
