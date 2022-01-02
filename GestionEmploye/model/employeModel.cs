@@ -19,6 +19,12 @@ namespace GestionEmploye.model
         {
         }
 
+        public employeModel(string login, string password)
+        {
+            this.login = login;
+            this.password = password;
+        }
+
         public employeModel(int id, string nom, string prenom, string login, string password, int grade)
         {
             this.id = id;
