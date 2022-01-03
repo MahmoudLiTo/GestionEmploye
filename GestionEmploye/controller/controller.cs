@@ -239,7 +239,19 @@ namespace GestionEmploye.controller
             return false;
         }
 
-
+        public void addDepartement(int i,string nom)
+        {
+            string query = string.Format("insert into departement values({0},'{1}')",i,nom);
+            SqlCommand cmd = new SqlCommand(query, cnx);
+            if (cnx.State == System.Data.ConnectionState.Open)
+            {
+                cnx.Close();
+            }
+            cnx.Open();
+            cmd.ExecuteNonQuery();
+            cnx.Close();
+        }
+        public List<departementModel> listDepartement 
 
 
 
