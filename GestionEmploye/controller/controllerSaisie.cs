@@ -16,5 +16,10 @@ namespace GestionEmploye.controller
 
         }
 
+        public void addpointage()
+        {
+
+        }
+
     }
 }
