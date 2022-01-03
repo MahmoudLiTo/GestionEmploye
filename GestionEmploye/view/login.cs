@@ -12,14 +12,16 @@ namespace GestionEmploye.view
 {
     public partial class login : Form
     {
-        public login()
+        string usertype;
+        public login(string usertype)
         {
+            this.usertype = usertype;
             InitializeComponent();
         }
 
         private void login_Load(object sender, EventArgs e)
         {
-
+            label1.Text +=" "+usertype.ToUpper();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -41,7 +43,7 @@ namespace GestionEmploye.view
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             index i = new index();
             i.Show();
 
