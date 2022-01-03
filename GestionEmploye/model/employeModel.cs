@@ -14,6 +14,7 @@ namespace GestionEmploye.model
         private string login;
         private string password;
         private int grade;
+        private string departement;
 
         public employeModel()
         {
@@ -25,7 +26,7 @@ namespace GestionEmploye.model
             this.password = password;
         }
 
-        public employeModel(int id, string nom, string prenom, string login, string password, int grade)
+        public employeModel(int id, string nom, string prenom, string login, string password, int grade,string departement)
         {
             this.id = id;
             this.nom = nom;
@@ -33,6 +34,8 @@ namespace GestionEmploye.model
             this.login = login;
             this.password = password;
             this.grade = grade;
+            this.departement = departement;
+
         }
 
         public int Id { get => id; set => id = value; }
@@ -41,5 +44,6 @@ namespace GestionEmploye.model
         public string Login { get => login; set => login = value; }
         public string Password { get => password; set => password = value; }
         public int Grade { get => grade; set => grade = value; }
+        public string Departement { get => departement; set => departement = value; }
     }
 }

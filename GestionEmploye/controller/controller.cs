@@ -57,7 +57,7 @@ namespace GestionEmploye.controller
         }*/
         public void addEmploye(employeModel emp)
         {
-            string query = string.Format("insert into employe(nom,prenom,login,password,grade) values('{0}','{1}','{2}','{3}',{4});", emp.Nom, emp.Prenom,emp.Login,emp.Password,emp.Grade);
+            string query = string.Format("insert into employe(nom,prenom,login,password,grade,departement) values('{0}','{1}','{2}','{3}',{4},{5});", emp.Nom, emp.Prenom,emp.Login,emp.Password,emp.Grade,emp.Departement);
             SqlCommand cmd = new SqlCommand(query, cnx);
             if (cnx.State == System.Data.ConnectionState.Open)
             {
@@ -100,7 +100,7 @@ namespace GestionEmploye.controller
             {
                 while (rd.Read())
                 {
-                    employeModel emp = new employeModel((int)rd["id"], rd["nom"].ToString(), rd["prenom"].ToString(), rd["login"].ToString(), rd["password"].ToString(), (int)rd["grade"]);
+                    employeModel emp = new employeModel((int)rd["id"], rd["nom"].ToString(), rd["prenom"].ToString(), rd["login"].ToString(), rd["password"].ToString(), (int)rd["grade"],rd["departement"].ToString();
                     myList.Add(emp);
                 }
             }
@@ -138,7 +138,7 @@ namespace GestionEmploye.controller
 
         public void updateEmploye(employeModel emp)
         {
-            string query = string.Format("update employe set nom = {1} , prenom = {2} , login = {3} , password = {4} , grade = {5}  where id = {0}; ",emp.Id,emp.Nom,emp.Prenom,emp.Login,emp.Password,emp.Grade);
+            string query = string.Format("update employe set nom = {1} , prenom = {2} , login = {3} , password = {4} , grade = {5} , departement = {6}  where id = {0}; ",emp.Id,emp.Nom,emp.Prenom,emp.Login,emp.Password,emp.Grade,emp.Departement);
             SqlCommand cmd = new SqlCommand(query, cnx);
             if (cnx.State == System.Data.ConnectionState.Open)
             {
