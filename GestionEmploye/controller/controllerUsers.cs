@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace GestionEmploye.controller
 {
-    class controller
+    class controllerUsers
     {
 
         SqlConnection cnx = new SqlConnection("Data Source = DESKTOP - MSJ5T4J; Initial Catalog = GestionEmploye; Integrated Security = True ");
 
         private object obj;
 
-        controller()
+       public controllerUsers()
         {
       
 
