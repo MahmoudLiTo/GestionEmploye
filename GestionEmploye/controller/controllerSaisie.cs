@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GestionEmploye.model;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -16,9 +17,9 @@ namespace GestionEmploye.controller
 
         }
 
-        public void addGrade(gradeModel grade)
+        public void addPointage(pointageModel pointage)
         {
-            string query = string.Format("insert into grade(nom,paieNormale,paieHeurSupp) values('{0}','{1}','{2}')", grade.Nom, grade.PaieNormale, grade.PaieHeurSupp);
+            string query = string.Format("insert into pointage(nbHeur,typeHeures,idEmploye,date) values('{0}','{1}','{2}','{3}');", pointage.NbHeur, pointage.TypeHeur, pointage.IdEmploye,pointage.Date);
             SqlCommand cmd = new SqlCommand(query, cnx);
             if (cnx.State == System.Data.ConnectionState.Open)
             {
@@ -28,10 +29,10 @@ namespace GestionEmploye.controller
             cmd.ExecuteNonQuery();
             cnx.Close();
         }
-        public List<gradeModel> listGrade()
+        public List<pointageModel> listPointage()
         {
-            List<gradeModel> myList = new List<gradeModel>();
-            string query = "select  * from grade;";
+            List<pointageModel> myList = new List<pointageModel>();
+            string query = "select  * from pointage;";
             SqlCommand cmd = new SqlCommand(query, cnx);
 
             if (cnx.State == System.Data.ConnectionState.Open)
@@ -42,21 +43,21 @@ namespace GestionEmploye.controller
             SqlDataReader rd = cmd.ExecuteReader();
             if (rd.HasRows)
             {
-                gradeModel grade;
+                pointageModel pointage;
                 while (rd.Read())
                 {
-                    grade = new gradeModel((int)rd["id"], rd["nom"].ToString(), (float)rd["paieNormale"], (float)rd["paieHeurSupp"]);
+                    pointage = new pointageModel((int)rd["id"], (float)rd["nbHeur"], (int)rd["typeHeures"], (int)rd["idEmploye"],rd["date"].ToString());
 
-                    myList.Add(grade);
+                    myList.Add(pointage);
                 }
             }
             cnx.Close();
             return myList;
 
         }
-        public void updateGrade(gradeModel grade)
+        public void updatePointage(pointageModel pointage)
         {
-            string query = string.Format("update departement set nom = '{1}' , paieNormale = {2} , paieHeurSupp = {3}  where id = {0}; ", grade.Id, grade.Nom, grade.PaieNormale, grade.PaieHeurSupp);
+            string query = string.Format("update pointage set nbHeur = {1} , typeHeures = {2} , idEmploye = {3} , date = '{4}'  where id = {0}; ", pointage.Id, pointage.NbHeur, pointage.TypeHeur, pointage.IdEmploye,pointage.Date);
             SqlCommand cmd = new SqlCommand(query, cnx);
             if (cnx.State == System.Data.ConnectionState.Open)
             {
@@ -67,9 +68,9 @@ namespace GestionEmploye.controller
             cnx.Close();
 
         }
-        public void deleteGrade(int i)
+        public void deletePointage(int i)
         {
-            string query = "delete from grade where id =" + i + ";";
+            string query = "delete from pointage where id =" + i + ";";
             SqlCommand cmd = new SqlCommand(query, cnx);
             if (cnx.State == System.Data.ConnectionState.Open)
             {
