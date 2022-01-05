@@ -14,12 +14,17 @@ namespace GestionEmploye.view.UserControls
 {
     public partial class employe : UserControl
     {
+        controllerUsers db;
+        List<gradeModel> mygradelist;
+        List<departementModel> mydepartmentlist;
+
         public employe()
         {
+            db = new controllerUsers();
+            mygradelist = db.listGrade();
+            mydepartmentlist = new List<departementModel>();
             InitializeComponent();
         }
-        List<gradeModel> mylist = new List<gradeModel>();
-        List<departementModel> mylist2 = new List<departementModel>();
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -43,30 +48,34 @@ namespace GestionEmploye.view.UserControls
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int id_combobox = comboBox1.SelectedIndex;
-            int id_grad = mylist[0];
+            int index = comboBox1.SelectedIndex;
+            gradeModel selectedGrade = mygradelist[index];
 
         }
         
         private void employe_Load(object sender, EventArgs e)
         {
-            controllerUsers db = new controllerUsers();
-            mylist = db.listGrade();
             comboBox1.Items.Clear();
-            foreach (gradeModel g in mylist)
+            foreach (gradeModel g in mygradelist)
             {
                 comboBox1.Items.Add(g.Nom);
             }
 
 
 
-            controllerUsers dba = new controllerUsers();
-            mylist2 = dba.listDepartement();
             comboBox2.Items.Clear();
-            foreach (departementModel g in mylist2)
+            foreach (departementModel d in mydepartmentlist)
             {
-                comboBox2.Items.Add(g.Nom);
+                comboBox2.Items.Add(d.Nom);
             }
+
+
+
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
