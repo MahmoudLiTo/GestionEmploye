@@ -37,6 +37,7 @@ namespace GestionEmploye.view.UserControls
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "grade";
             this.Size = new System.Drawing.Size(1263, 614);
+            this.Load += new System.EventHandler(this.grade_Load);
             this.ResumeLayout(false);
 
         }

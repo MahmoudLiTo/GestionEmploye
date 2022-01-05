@@ -49,34 +49,36 @@ namespace GestionEmploye.view.UserControls
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(54, 277);
+            this.label5.Location = new System.Drawing.Point(47, 208);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 20);
+            this.label5.Size = new System.Drawing.Size(34, 15);
             this.label5.TabIndex = 2;
             this.label5.Text = "Nom";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(54, 238);
+            this.label1.Location = new System.Drawing.Point(47, 178);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 20);
+            this.label1.Size = new System.Drawing.Size(21, 15);
             this.label1.TabIndex = 2;
             this.label1.Text = "ID:";
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(132, 273);
+            this.textBox5.Location = new System.Drawing.Point(116, 205);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(157, 27);
+            this.textBox5.Size = new System.Drawing.Size(138, 23);
             this.textBox5.TabIndex = 1;
             // 
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(132, 234);
+            this.textBox1.Location = new System.Drawing.Point(116, 176);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(157, 27);
+            this.textBox1.Size = new System.Drawing.Size(138, 23);
             this.textBox1.TabIndex = 1;
             // 
             // button4
@@ -85,9 +87,10 @@ namespace GestionEmploye.view.UserControls
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button4.Location = new System.Drawing.Point(3, 61);
+            this.button4.Location = new System.Drawing.Point(3, 46);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(296, 60);
+            this.button4.Size = new System.Drawing.Size(259, 45);
             this.button4.TabIndex = 0;
             this.button4.Text = "Delete";
             this.button4.UseVisualStyleBackColor = false;
@@ -98,9 +101,10 @@ namespace GestionEmploye.view.UserControls
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Location = new System.Drawing.Point(3, 555);
+            this.button3.Location = new System.Drawing.Point(3, 416);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(296, 60);
+            this.button3.Size = new System.Drawing.Size(259, 45);
             this.button3.TabIndex = 0;
             this.button3.Text = "Update";
             this.button3.UseVisualStyleBackColor = false;
@@ -111,9 +115,10 @@ namespace GestionEmploye.view.UserControls
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button5.Location = new System.Drawing.Point(167, 327);
+            this.button5.Location = new System.Drawing.Point(146, 245);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(113, 38);
+            this.button5.Size = new System.Drawing.Size(99, 28);
             this.button5.TabIndex = 0;
             this.button5.Text = "Clear";
             this.button5.UseVisualStyleBackColor = false;
@@ -124,9 +129,10 @@ namespace GestionEmploye.view.UserControls
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(3, 495);
+            this.button2.Location = new System.Drawing.Point(3, 371);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(296, 60);
+            this.button2.Size = new System.Drawing.Size(259, 45);
             this.button2.TabIndex = 0;
             this.button2.Text = "Add";
             this.button2.UseVisualStyleBackColor = false;
@@ -138,8 +144,9 @@ namespace GestionEmploye.view.UserControls
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button1.Location = new System.Drawing.Point(3, 1);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(296, 60);
+            this.button1.Size = new System.Drawing.Size(259, 45);
             this.button1.TabIndex = 0;
             this.button1.Text = "List";
             this.button1.UseVisualStyleBackColor = false;
@@ -157,9 +164,10 @@ namespace GestionEmploye.view.UserControls
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(1141, 0);
+            this.panel1.Location = new System.Drawing.Point(999, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(302, 818);
+            this.panel1.Size = new System.Drawing.Size(264, 614);
             this.panel1.TabIndex = 3;
             // 
             // dataGridView1
@@ -169,12 +177,14 @@ namespace GestionEmploye.view.UserControls
             this.id,
             this.Nom});
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(1142, 818);
+            this.dataGridView1.Size = new System.Drawing.Size(999, 614);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // id
             // 
@@ -194,12 +204,13 @@ namespace GestionEmploye.view.UserControls
             // 
             // departement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "departement";
-            this.Size = new System.Drawing.Size(1443, 818);
+            this.Size = new System.Drawing.Size(1263, 614);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

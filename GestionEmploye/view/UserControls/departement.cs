@@ -1,4 +1,7 @@
-﻿using System;
+﻿using GestionEmploye.controller;
+
+using GestionEmploye.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +15,18 @@ namespace GestionEmploye.view.UserControls
 {
     public partial class departement : UserControl
     {
+        controllerUsers db;
+
+
         public departement()
         {
+            db = new controllerUsers();
             InitializeComponent();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

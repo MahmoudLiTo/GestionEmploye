@@ -16,5 +16,10 @@ namespace GestionEmploye.view.UserControls
         {
             InitializeComponent();
         }
+
+        private void grade_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
