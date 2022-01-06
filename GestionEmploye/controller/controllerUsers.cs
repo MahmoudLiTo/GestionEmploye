@@ -11,19 +11,14 @@ namespace GestionEmploye.controller
     class controllerUsers
     {
 
-        SqlConnection cnx = new SqlConnection("Data Source = DESKTOP - MSJ5T4J; Initial Catalog = GestionEmploye; Integrated Security = True ");
+        SqlConnection cnx = new SqlConnection("Data Source=DESKTOP-MSJ5T4J;Initial Catalog=GestionEmploye;Integrated Security=True");
 
-        private object obj;
 
-       public controllerUsers()
-        {
-      
-
-        }
 
 
         public void addEmploye(employeModel emp)
         {
+
             string query = string.Format("insert into employe(nom,prenom,login,password,grade,departement,matricule) values('{0}','{1}','{2}','{3}',{4},{5},'{6}');", emp.Nom, emp.Prenom,emp.Login,emp.Password,emp.Grade,emp.Departement,emp.Matricule);
             SqlCommand cmd = new SqlCommand(query, cnx);
             if (cnx.State == System.Data.ConnectionState.Open)
@@ -67,7 +62,7 @@ namespace GestionEmploye.controller
             {
                 while (rd.Read())
                 {
-                    employeModel emp = new employeModel((int)rd["id"], rd["nom"].ToString(), rd["prenom"].ToString(), rd["login"].ToString(), rd["password"].ToString(), (int)rd["grade"],(int)rd["departement"],rd["matricule"].ToString());
+                    employeModel emp = new employeModel((int)rd[0], rd[1].ToString(), rd[2].ToString(), rd[4].ToString(), rd[5].ToString(), (int)rd[6],(int)rd[7],rd[3].ToString());
                     myList.Add(emp);
                 }
             }
@@ -94,7 +89,7 @@ namespace GestionEmploye.controller
             {
                 while (rd.Read())
                 {
-                    RHModel rh = new RHModel((int)rd["id"], rd["nom"].ToString(), rd["prenom"].ToString(), rd["login"].ToString(), rd["password"].ToString());
+                    RHModel rh = new RHModel((int)rd[0], rd[1].ToString(), rd[2].ToString(), rd[3].ToString(), rd[4].ToString());
                     myList.Add(rh);
                 }
             }
@@ -208,7 +203,7 @@ namespace GestionEmploye.controller
 
         public void addDepartement(int i,string nom)
         {
-            string query = string.Format("insert into departement(nom) values('{1}')",nom);
+            string query = string.Format("insert into departement(nom) values('{0}')",nom);
             SqlCommand cmd = new SqlCommand(query, cnx);
             if (cnx.State == System.Data.ConnectionState.Open)
             {
@@ -234,7 +229,7 @@ namespace GestionEmploye.controller
             {
                 while (rd.Read())
                 {
-                    departementModel depar = new departementModel((int)rd["id"], rd["nom"].ToString());
+                    departementModel depar = new departementModel((int)rd[0], rd[1].ToString());
 
                     myList.Add(depar);
                 }
@@ -268,6 +263,28 @@ namespace GestionEmploye.controller
             cmd.ExecuteNonQuery();
             cnx.Close();
         }
+
+
+        public departementModel searchDepartement(int i)
+        {
+            string query = "select  * from departement where id = "+ i + ";";
+            SqlCommand cmd = new SqlCommand(query, cnx);
+
+            if (cnx.State == System.Data.ConnectionState.Open)
+            {
+                cnx.Close();
+            }
+            cnx.Open();
+            SqlDataReader rd = cmd.ExecuteReader();
+            rd.Read();
+
+            departementModel depar = new departementModel((int)rd[0], rd[1].ToString());
+
+            
+            cnx.Close();
+            return depar;
+
+        }
         public void addGrade(gradeModel grade)
         {
             string query = string.Format("insert into grade(nom,paieNormale,paieHeurSupp) values('{0}','{1}','{2}')", grade.Nom,grade.PaieNormale,grade.PaieHeurSupp);
@@ -297,7 +314,7 @@ namespace GestionEmploye.controller
                 gradeModel grade;
                 while (rd.Read())
                 {
-                    grade = new gradeModel((int)rd["id"], rd["nom"].ToString(),(float)rd["paieNormale"],(float)rd["paieHeurSupp"]);
+                    grade = new gradeModel((int)rd[0], rd[1].ToString(),float.Parse(rd[2].ToString()),float.Parse(rd[3].ToString()));
 
                     myList.Add(grade);
                 }
@@ -330,6 +347,24 @@ namespace GestionEmploye.controller
             cnx.Open();
             cmd.ExecuteNonQuery();
             cnx.Close();
+        }
+        public gradeModel searchgrade(int i)
+        {
+            string query = "select * from grade where id = " + i + ";";
+            SqlCommand cmd = new SqlCommand(query, cnx);
+            gradeModel grade;
+            if (cnx.State == System.Data.ConnectionState.Open)
+            {
+                cnx.Close();
+            }
+            cnx.Open();
+            SqlDataReader rd= cmd.ExecuteReader();
+            rd.Read();
+            grade = new gradeModel((int)rd[0], rd[1].ToString(), float.Parse(rd[2].ToString()), float.Parse(rd[3].ToString()));
+            
+            cnx.Close();
+            return grade;
+
         }
 
 

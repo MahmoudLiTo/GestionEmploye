@@ -10,7 +10,7 @@ namespace GestionEmploye.controller
 {
     class controllerSaisie
     {
-        SqlConnection cnx = new SqlConnection("Data Source = DESKTOP - MSJ5T4J; Initial Catalog = GestionEmploye; Integrated Security = True ");
+        SqlConnection cnx = new SqlConnection("Data Source=DESKTOP-MSJ5T4J;Initial Catalog=GestionEmploye;Integrated Security=True");
 
         public controllerSaisie()
         {
@@ -46,7 +46,7 @@ namespace GestionEmploye.controller
                 pointageModel pointage;
                 while (rd.Read())
                 {
-                    pointage = new pointageModel((int)rd["id"], (float)rd["nbHeur"], (int)rd["typeHeures"], (int)rd["idEmploye"],rd["date"].ToString());
+                    pointage = new pointageModel((int)rd[0], (float)rd[1], (int)rd[2], (int)rd[3],rd[4].ToString());
 
                     myList.Add(pointage);
                 }

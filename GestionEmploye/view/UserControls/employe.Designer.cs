@@ -31,34 +31,35 @@ namespace GestionEmploye.view.UserControls
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Grade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Departement = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Matricule = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Prenom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Matricule = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Grade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Departement = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Login = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnclrid = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.passwordBox = new System.Windows.Forms.TextBox();
+            this.loginBox = new System.Windows.Forms.TextBox();
+            this.departementBox = new System.Windows.Forms.ComboBox();
+            this.gradeBox = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.prenomBox = new System.Windows.Forms.TextBox();
+            this.nomBox = new System.Windows.Forms.TextBox();
+            this.matriculeBox = new System.Windows.Forms.TextBox();
+            this.idBox = new System.Windows.Forms.TextBox();
+            this.btndelete = new System.Windows.Forms.Button();
+            this.btnupdate = new System.Windows.Forms.Button();
+            this.btnadd = new System.Windows.Forms.Button();
+            this.btnlist = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -69,11 +70,11 @@ namespace GestionEmploye.view.UserControls
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
-            this.Grade,
-            this.Departement,
-            this.Matricule,
             this.Nom,
             this.Prenom,
+            this.Matricule,
+            this.Grade,
+            this.Departement,
             this.Login,
             this.Password});
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
@@ -82,7 +83,7 @@ namespace GestionEmploye.view.UserControls
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(999, 614);
+            this.dataGridView1.Size = new System.Drawing.Size(735, 523);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -93,30 +94,6 @@ namespace GestionEmploye.view.UserControls
             this.id.Name = "id";
             this.id.ReadOnly = true;
             this.id.Width = 125;
-            // 
-            // Grade
-            // 
-            this.Grade.HeaderText = "Grade";
-            this.Grade.MinimumWidth = 6;
-            this.Grade.Name = "Grade";
-            this.Grade.ReadOnly = true;
-            this.Grade.Width = 125;
-            // 
-            // Departement
-            // 
-            this.Departement.HeaderText = "Departement";
-            this.Departement.MinimumWidth = 6;
-            this.Departement.Name = "Departement";
-            this.Departement.ReadOnly = true;
-            this.Departement.Width = 125;
-            // 
-            // Matricule
-            // 
-            this.Matricule.HeaderText = "Matricule";
-            this.Matricule.MinimumWidth = 6;
-            this.Matricule.Name = "Matricule";
-            this.Matricule.ReadOnly = true;
-            this.Matricule.Width = 125;
             // 
             // Nom
             // 
@@ -133,6 +110,30 @@ namespace GestionEmploye.view.UserControls
             this.Prenom.Name = "Prenom";
             this.Prenom.ReadOnly = true;
             this.Prenom.Width = 125;
+            // 
+            // Matricule
+            // 
+            this.Matricule.HeaderText = "Matricule";
+            this.Matricule.MinimumWidth = 6;
+            this.Matricule.Name = "Matricule";
+            this.Matricule.ReadOnly = true;
+            this.Matricule.Width = 125;
+            // 
+            // Grade
+            // 
+            this.Grade.HeaderText = "Grade";
+            this.Grade.MinimumWidth = 6;
+            this.Grade.Name = "Grade";
+            this.Grade.ReadOnly = true;
+            this.Grade.Width = 125;
+            // 
+            // Departement
+            // 
+            this.Departement.HeaderText = "Departement";
+            this.Departement.MinimumWidth = 6;
+            this.Departement.Name = "Departement";
+            this.Departement.ReadOnly = true;
+            this.Departement.Width = 125;
             // 
             // Login
             // 
@@ -153,75 +154,110 @@ namespace GestionEmploye.view.UserControls
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PeachPuff;
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnclrid);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.passwordBox);
+            this.panel1.Controls.Add(this.loginBox);
+            this.panel1.Controls.Add(this.departementBox);
+            this.panel1.Controls.Add(this.gradeBox);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox8);
-            this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.prenomBox);
+            this.panel1.Controls.Add(this.nomBox);
+            this.panel1.Controls.Add(this.matriculeBox);
+            this.panel1.Controls.Add(this.idBox);
+            this.panel1.Controls.Add(this.btndelete);
+            this.panel1.Controls.Add(this.btnupdate);
+            this.panel1.Controls.Add(this.btnadd);
+            this.panel1.Controls.Add(this.btnlist);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(999, 0);
+            this.panel1.Location = new System.Drawing.Point(741, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(264, 614);
+            this.panel1.Size = new System.Drawing.Size(244, 523);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // comboBox2
+            // btnclrid
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(116, 154);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(138, 23);
-            this.comboBox2.TabIndex = 3;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(116, 130);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(138, 23);
-            this.comboBox1.TabIndex = 3;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.btnclrid.BackColor = System.Drawing.Color.Coral;
+            this.btnclrid.FlatAppearance.BorderSize = 0;
+            this.btnclrid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnclrid.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnclrid.Location = new System.Drawing.Point(143, 100);
+            this.btnclrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnclrid.Name = "btnclrid";
+            this.btnclrid.Size = new System.Drawing.Size(86, 23);
+            this.btnclrid.TabIndex = 8;
+            this.btnclrid.Text = "Clear ID";
+            this.btnclrid.UseVisualStyleBackColor = false;
+            this.btnclrid.Click += new System.EventHandler(this.btnclrid_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(47, 282);
+            this.label8.Location = new System.Drawing.Point(22, 291);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(57, 15);
-            this.label8.TabIndex = 2;
+            this.label8.TabIndex = 6;
             this.label8.Text = "Password";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(47, 257);
+            this.label7.Location = new System.Drawing.Point(22, 266);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(37, 15);
-            this.label7.TabIndex = 2;
+            this.label7.TabIndex = 7;
             this.label7.Text = "Login";
+            // 
+            // passwordBox
+            // 
+            this.passwordBox.Location = new System.Drawing.Point(91, 288);
+            this.passwordBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.passwordBox.Name = "passwordBox";
+            this.passwordBox.Size = new System.Drawing.Size(138, 23);
+            this.passwordBox.TabIndex = 4;
+            // 
+            // loginBox
+            // 
+            this.loginBox.Location = new System.Drawing.Point(91, 263);
+            this.loginBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.loginBox.Name = "loginBox";
+            this.loginBox.Size = new System.Drawing.Size(138, 23);
+            this.loginBox.TabIndex = 5;
+            // 
+            // departementBox
+            // 
+            this.departementBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.departementBox.FormattingEnabled = true;
+            this.departementBox.Location = new System.Drawing.Point(91, 235);
+            this.departementBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.departementBox.Name = "departementBox";
+            this.departementBox.Size = new System.Drawing.Size(138, 23);
+            this.departementBox.TabIndex = 3;
+            // 
+            // gradeBox
+            // 
+            this.gradeBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.gradeBox.FormattingEnabled = true;
+            this.gradeBox.Location = new System.Drawing.Point(91, 211);
+            this.gradeBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gradeBox.Name = "gradeBox";
+            this.gradeBox.Size = new System.Drawing.Size(138, 23);
+            this.gradeBox.TabIndex = 3;
+            this.gradeBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(47, 232);
+            this.label6.Location = new System.Drawing.Point(22, 156);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(49, 15);
             this.label6.TabIndex = 2;
@@ -230,7 +266,7 @@ namespace GestionEmploye.view.UserControls
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(47, 208);
+            this.label5.Location = new System.Drawing.Point(22, 132);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(34, 15);
             this.label5.TabIndex = 2;
@@ -239,7 +275,7 @@ namespace GestionEmploye.view.UserControls
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(42, 183);
+            this.label4.Location = new System.Drawing.Point(17, 184);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 15);
             this.label4.TabIndex = 2;
@@ -248,7 +284,7 @@ namespace GestionEmploye.view.UserControls
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 158);
+            this.label3.Location = new System.Drawing.Point(-5, 239);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 15);
             this.label3.TabIndex = 2;
@@ -257,7 +293,7 @@ namespace GestionEmploye.view.UserControls
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 134);
+            this.label2.Location = new System.Drawing.Point(22, 215);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 15);
             this.label2.TabIndex = 2;
@@ -266,120 +302,105 @@ namespace GestionEmploye.view.UserControls
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 109);
+            this.label1.Location = new System.Drawing.Point(22, 103);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(21, 15);
             this.label1.TabIndex = 2;
             this.label1.Text = "ID:";
             // 
-            // textBox8
+            // prenomBox
             // 
-            this.textBox8.Location = new System.Drawing.Point(116, 279);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(138, 23);
-            this.textBox8.TabIndex = 1;
+            this.prenomBox.Location = new System.Drawing.Point(91, 154);
+            this.prenomBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.prenomBox.Name = "prenomBox";
+            this.prenomBox.Size = new System.Drawing.Size(138, 23);
+            this.prenomBox.TabIndex = 1;
             // 
-            // textBox7
+            // nomBox
             // 
-            this.textBox7.Location = new System.Drawing.Point(116, 254);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(138, 23);
-            this.textBox7.TabIndex = 1;
+            this.nomBox.Location = new System.Drawing.Point(91, 129);
+            this.nomBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nomBox.Name = "nomBox";
+            this.nomBox.Size = new System.Drawing.Size(138, 23);
+            this.nomBox.TabIndex = 1;
             // 
-            // textBox6
+            // matriculeBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(116, 230);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(138, 23);
-            this.textBox6.TabIndex = 1;
+            this.matriculeBox.Location = new System.Drawing.Point(91, 181);
+            this.matriculeBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.matriculeBox.Name = "matriculeBox";
+            this.matriculeBox.Size = new System.Drawing.Size(138, 23);
+            this.matriculeBox.TabIndex = 1;
             // 
-            // textBox5
+            // idBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(116, 205);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(138, 23);
-            this.textBox5.TabIndex = 1;
+            this.idBox.Enabled = false;
+            this.idBox.Location = new System.Drawing.Point(91, 100);
+            this.idBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.idBox.Name = "idBox";
+            this.idBox.Size = new System.Drawing.Size(46, 23);
+            this.idBox.TabIndex = 1;
+            this.idBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox4
+            // btndelete
             // 
-            this.textBox4.Location = new System.Drawing.Point(116, 180);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(138, 23);
-            this.textBox4.TabIndex = 1;
+            this.btndelete.BackColor = System.Drawing.Color.Coral;
+            this.btndelete.FlatAppearance.BorderSize = 0;
+            this.btndelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btndelete.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btndelete.Location = new System.Drawing.Point(3, 46);
+            this.btndelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btndelete.Name = "btndelete";
+            this.btndelete.Size = new System.Drawing.Size(259, 45);
+            this.btndelete.TabIndex = 0;
+            this.btndelete.Text = "Delete";
+            this.btndelete.UseVisualStyleBackColor = false;
+            this.btndelete.Click += new System.EventHandler(this.button4_Click);
             // 
-            // textBox1
+            // btnupdate
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(116, 106);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(138, 23);
-            this.textBox1.TabIndex = 1;
+            this.btnupdate.BackColor = System.Drawing.Color.Coral;
+            this.btnupdate.FlatAppearance.BorderSize = 0;
+            this.btnupdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnupdate.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnupdate.Location = new System.Drawing.Point(3, 416);
+            this.btnupdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnupdate.Name = "btnupdate";
+            this.btnupdate.Size = new System.Drawing.Size(259, 45);
+            this.btnupdate.TabIndex = 0;
+            this.btnupdate.Text = "Update";
+            this.btnupdate.UseVisualStyleBackColor = false;
+            this.btnupdate.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // btnadd
             // 
-            this.button4.BackColor = System.Drawing.Color.Coral;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button4.Location = new System.Drawing.Point(3, 46);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(259, 45);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Delete";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnadd.BackColor = System.Drawing.Color.Coral;
+            this.btnadd.FlatAppearance.BorderSize = 0;
+            this.btnadd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnadd.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnadd.Location = new System.Drawing.Point(3, 371);
+            this.btnadd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnadd.Name = "btnadd";
+            this.btnadd.Size = new System.Drawing.Size(259, 45);
+            this.btnadd.TabIndex = 0;
+            this.btnadd.Text = "Add";
+            this.btnadd.UseVisualStyleBackColor = false;
+            this.btnadd.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btnlist
             // 
-            this.button3.BackColor = System.Drawing.Color.Coral;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Location = new System.Drawing.Point(3, 416);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(259, 45);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Update";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Coral;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button5.Location = new System.Drawing.Point(146, 310);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(99, 28);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "Clear";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Coral;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(3, 371);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(259, 45);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Add";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnlist.BackColor = System.Drawing.Color.Coral;
+            this.btnlist.FlatAppearance.BorderSize = 0;
+            this.btnlist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnlist.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnlist.Location = new System.Drawing.Point(3, 1);
+            this.btnlist.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnlist.Name = "btnlist";
+            this.btnlist.Size = new System.Drawing.Size(259, 45);
+            this.btnlist.TabIndex = 0;
+            this.btnlist.Text = "List";
+            this.btnlist.UseVisualStyleBackColor = false;
+            this.btnlist.Click += new System.EventHandler(this.button1_Click);
             // 
             // button1
             // 
@@ -387,14 +408,14 @@ namespace GestionEmploye.view.UserControls
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(3, 1);
+            this.button1.Location = new System.Drawing.Point(143, 327);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(259, 45);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "List";
+            this.button1.Size = new System.Drawing.Size(86, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Clear";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // employe
             // 
@@ -404,7 +425,7 @@ namespace GestionEmploye.view.UserControls
             this.Controls.Add(this.dataGridView1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "employe";
-            this.Size = new System.Drawing.Size(1263, 614);
+            this.Size = new System.Drawing.Size(985, 523);
             this.Load += new System.EventHandler(this.employe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -417,34 +438,35 @@ namespace GestionEmploye.view.UserControls
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Grade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Departement;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Matricule;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Prenom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Login;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Password;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btndelete;
+        private System.Windows.Forms.Button btnupdate;
+        private System.Windows.Forms.Button btnadd;
+        private System.Windows.Forms.Button btnlist;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox prenomBox;
+        private System.Windows.Forms.TextBox nomBox;
+        private System.Windows.Forms.TextBox matriculeBox;
+        private System.Windows.Forms.TextBox idBox;
+        private System.Windows.Forms.ComboBox departementBox;
+        private System.Windows.Forms.ComboBox gradeBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Prenom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Matricule;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Grade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Departement;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Login;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Password;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox passwordBox;
+        private System.Windows.Forms.TextBox loginBox;
+        private System.Windows.Forms.Button btnclrid;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -39,6 +39,7 @@ namespace GestionEmploye.view.RH
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.employe1 = new GestionEmploye.view.UserControls.employe();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -47,19 +48,22 @@ namespace GestionEmploye.view.RH
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel2.Controls.Add(this.employe1);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(258, 0);
+            this.panel2.Location = new System.Drawing.Point(226, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1442, 900);
+            this.panel2.Size = new System.Drawing.Size(987, 591);
             this.panel2.TabIndex = 3;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(0, 1);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1442, 82);
+            this.panel3.Size = new System.Drawing.Size(1262, 62);
             this.panel3.TabIndex = 0;
             // 
             // label2
@@ -67,9 +71,9 @@ namespace GestionEmploye.view.RH
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(326, 22);
+            this.label2.Location = new System.Drawing.Point(285, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 41);
+            this.label2.Size = new System.Drawing.Size(113, 32);
             this.label2.TabIndex = 2;
             this.label2.Text = "Manage ";
             // 
@@ -84,8 +88,9 @@ namespace GestionEmploye.view.RH
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(258, 900);
+            this.panel1.Size = new System.Drawing.Size(226, 591);
             this.panel1.TabIndex = 2;
             // 
             // button4
@@ -95,9 +100,10 @@ namespace GestionEmploye.view.RH
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(0, 457);
+            this.button4.Location = new System.Drawing.Point(0, 343);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(258, 78);
+            this.button4.Size = new System.Drawing.Size(226, 58);
             this.button4.TabIndex = 3;
             this.button4.Text = "button1";
             this.button4.UseVisualStyleBackColor = false;
@@ -109,9 +115,10 @@ namespace GestionEmploye.view.RH
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 379);
+            this.button3.Location = new System.Drawing.Point(0, 284);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(258, 78);
+            this.button3.Size = new System.Drawing.Size(226, 58);
             this.button3.TabIndex = 3;
             this.button3.Text = "button1";
             this.button3.UseVisualStyleBackColor = false;
@@ -123,9 +130,10 @@ namespace GestionEmploye.view.RH
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 301);
+            this.button2.Location = new System.Drawing.Point(0, 226);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(258, 78);
+            this.button2.Size = new System.Drawing.Size(226, 58);
             this.button2.TabIndex = 3;
             this.button2.Text = "button1";
             this.button2.UseVisualStyleBackColor = false;
@@ -137,9 +145,10 @@ namespace GestionEmploye.view.RH
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 223);
+            this.button1.Location = new System.Drawing.Point(0, 167);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(258, 78);
+            this.button1.Size = new System.Drawing.Size(226, 58);
             this.button1.TabIndex = 3;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = false;
@@ -149,27 +158,37 @@ namespace GestionEmploye.view.RH
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(44, 88);
+            this.label1.Location = new System.Drawing.Point(38, 66);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 41);
+            this.label1.Size = new System.Drawing.Size(138, 32);
             this.label1.TabIndex = 2;
             this.label1.Text = "Dashboard";
             // 
             // panel4
             // 
-            this.panel4.Location = new System.Drawing.Point(257, 82);
+            this.panel4.Location = new System.Drawing.Point(225, 62);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1443, 818);
+            this.panel4.Size = new System.Drawing.Size(1263, 614);
             this.panel4.TabIndex = 1;
+            // 
+            // employe1
+            // 
+            this.employe1.Location = new System.Drawing.Point(2, 64);
+            this.employe1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.employe1.Name = "employe1";
+            this.employe1.Size = new System.Drawing.Size(982, 525);
+            this.employe1.TabIndex = 1;
             // 
             // RHIndex
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1700, 900);
+            this.ClientSize = new System.Drawing.Size(1213, 591);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "RHIndex";
             this.Text = "RHIndex";
             this.panel2.ResumeLayout(false);
@@ -193,5 +212,6 @@ namespace GestionEmploye.view.RH
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
+        private UserControls.employe employe1;
     }
 }

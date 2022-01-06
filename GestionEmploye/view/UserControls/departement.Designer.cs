@@ -94,6 +94,7 @@ namespace GestionEmploye.view.UserControls
             this.button4.TabIndex = 0;
             this.button4.Text = "Delete";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -108,6 +109,7 @@ namespace GestionEmploye.view.UserControls
             this.button3.TabIndex = 0;
             this.button3.Text = "Update";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button5
             // 
@@ -122,6 +124,7 @@ namespace GestionEmploye.view.UserControls
             this.button5.TabIndex = 0;
             this.button5.Text = "Clear";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button2
             // 
@@ -136,6 +139,7 @@ namespace GestionEmploye.view.UserControls
             this.button2.TabIndex = 0;
             this.button2.Text = "Add";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -150,6 +154,7 @@ namespace GestionEmploye.view.UserControls
             this.button1.TabIndex = 0;
             this.button1.Text = "List";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -164,11 +169,12 @@ namespace GestionEmploye.view.UserControls
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(999, 0);
+            this.panel1.Location = new System.Drawing.Point(721, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(264, 614);
+            this.panel1.Size = new System.Drawing.Size(264, 523);
             this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // dataGridView1
             // 
@@ -210,7 +216,7 @@ namespace GestionEmploye.view.UserControls
             this.Controls.Add(this.dataGridView1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "departement";
-            this.Size = new System.Drawing.Size(1263, 614);
+            this.Size = new System.Drawing.Size(985, 523);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -38,10 +38,13 @@ namespace GestionEmploye.view.admin
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.employe1 = new GestionEmploye.view.UserControls.employe();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -166,6 +169,7 @@ namespace GestionEmploye.view.admin
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(226, 0);
@@ -174,6 +178,14 @@ namespace GestionEmploye.view.admin
             this.panel2.Size = new System.Drawing.Size(987, 591);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.employe1);
+            this.panel5.Location = new System.Drawing.Point(-1, 65);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(985, 523);
+            this.panel5.TabIndex = 1;
             // 
             // panel3
             // 
@@ -197,6 +209,14 @@ namespace GestionEmploye.view.admin
             this.label2.Text = "Manage ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // employe1
+            // 
+            this.employe1.Location = new System.Drawing.Point(4, 1);
+            this.employe1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.employe1.Name = "employe1";
+            this.employe1.Size = new System.Drawing.Size(978, 520);
+            this.employe1.TabIndex = 0;
+            // 
             // indexAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -211,6 +231,7 @@ namespace GestionEmploye.view.admin
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -230,5 +251,7 @@ namespace GestionEmploye.view.admin
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Panel panel5;
+        private UserControls.employe employe1;
     }
 }
