@@ -34,11 +34,11 @@ namespace GestionEmploye.view.UserControls
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.passwordBox = new System.Windows.Forms.TextBox();
+            this.loginBox = new System.Windows.Forms.TextBox();
+            this.prenomBox = new System.Windows.Forms.TextBox();
+            this.nomBox = new System.Windows.Forms.TextBox();
+            this.idBox = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -51,6 +51,7 @@ namespace GestionEmploye.view.UserControls
             this.Prenom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Login = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +64,7 @@ namespace GestionEmploye.view.UserControls
             this.label8.Size = new System.Drawing.Size(57, 15);
             this.label8.TabIndex = 2;
             this.label8.Text = "Password";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
             // 
@@ -72,6 +74,7 @@ namespace GestionEmploye.view.UserControls
             this.label7.Size = new System.Drawing.Size(37, 15);
             this.label7.TabIndex = 2;
             this.label7.Text = "Login";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
@@ -81,6 +84,7 @@ namespace GestionEmploye.view.UserControls
             this.label6.Size = new System.Drawing.Size(49, 15);
             this.label6.TabIndex = 2;
             this.label6.Text = "Prenom";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -90,6 +94,7 @@ namespace GestionEmploye.view.UserControls
             this.label5.Size = new System.Drawing.Size(34, 15);
             this.label5.TabIndex = 2;
             this.label5.Text = "Nom";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label1
             // 
@@ -99,47 +104,53 @@ namespace GestionEmploye.view.UserControls
             this.label1.Size = new System.Drawing.Size(21, 15);
             this.label1.TabIndex = 2;
             this.label1.Text = "ID:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox8
+            // passwordBox
             // 
-            this.textBox8.Location = new System.Drawing.Point(116, 248);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(138, 23);
-            this.textBox8.TabIndex = 1;
+            this.passwordBox.Location = new System.Drawing.Point(116, 248);
+            this.passwordBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.passwordBox.Name = "passwordBox";
+            this.passwordBox.Size = new System.Drawing.Size(138, 23);
+            this.passwordBox.TabIndex = 1;
+            this.passwordBox.TextChanged += new System.EventHandler(this.passwordBox_TextChanged);
             // 
-            // textBox7
+            // loginBox
             // 
-            this.textBox7.Location = new System.Drawing.Point(116, 224);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(138, 23);
-            this.textBox7.TabIndex = 1;
+            this.loginBox.Location = new System.Drawing.Point(116, 224);
+            this.loginBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.loginBox.Name = "loginBox";
+            this.loginBox.Size = new System.Drawing.Size(138, 23);
+            this.loginBox.TabIndex = 1;
+            this.loginBox.TextChanged += new System.EventHandler(this.loginBox_TextChanged);
             // 
-            // textBox6
+            // prenomBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(116, 199);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(138, 23);
-            this.textBox6.TabIndex = 1;
+            this.prenomBox.Location = new System.Drawing.Point(116, 199);
+            this.prenomBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.prenomBox.Name = "prenomBox";
+            this.prenomBox.Size = new System.Drawing.Size(138, 23);
+            this.prenomBox.TabIndex = 1;
+            this.prenomBox.TextChanged += new System.EventHandler(this.prenomBox_TextChanged);
             // 
-            // textBox5
+            // nomBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(116, 174);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(138, 23);
-            this.textBox5.TabIndex = 1;
+            this.nomBox.Location = new System.Drawing.Point(116, 174);
+            this.nomBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nomBox.Name = "nomBox";
+            this.nomBox.Size = new System.Drawing.Size(138, 23);
+            this.nomBox.TabIndex = 1;
+            this.nomBox.TextChanged += new System.EventHandler(this.nomBox_TextChanged);
             // 
-            // textBox1
+            // idBox
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(116, 144);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(138, 23);
-            this.textBox1.TabIndex = 1;
+            this.idBox.Enabled = false;
+            this.idBox.Location = new System.Drawing.Point(116, 144);
+            this.idBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.idBox.Name = "idBox";
+            this.idBox.Size = new System.Drawing.Size(42, 23);
+            this.idBox.TabIndex = 1;
+            this.idBox.TextChanged += new System.EventHandler(this.idBox_TextChanged);
             // 
             // button4
             // 
@@ -154,6 +165,7 @@ namespace GestionEmploye.view.UserControls
             this.button4.TabIndex = 0;
             this.button4.Text = "Delete";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -168,6 +180,7 @@ namespace GestionEmploye.view.UserControls
             this.button3.TabIndex = 0;
             this.button3.Text = "Update";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button5
             // 
@@ -175,13 +188,14 @@ namespace GestionEmploye.view.UserControls
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button5.Location = new System.Drawing.Point(146, 281);
+            this.button5.Location = new System.Drawing.Point(164, 294);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(99, 28);
+            this.button5.Size = new System.Drawing.Size(90, 23);
             this.button5.TabIndex = 0;
             this.button5.Text = "Clear";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button2
             // 
@@ -196,6 +210,7 @@ namespace GestionEmploye.view.UserControls
             this.button2.TabIndex = 0;
             this.button2.Text = "Add";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -210,20 +225,22 @@ namespace GestionEmploye.view.UserControls
             this.button1.TabIndex = 0;
             this.button1.Text = "List";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PeachPuff;
+            this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox8);
-            this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.passwordBox);
+            this.panel1.Controls.Add(this.loginBox);
+            this.panel1.Controls.Add(this.prenomBox);
+            this.panel1.Controls.Add(this.nomBox);
+            this.panel1.Controls.Add(this.idBox);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button5);
@@ -235,6 +252,7 @@ namespace GestionEmploye.view.UserControls
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(264, 523);
             this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // dataGridView1
             // 
@@ -251,8 +269,9 @@ namespace GestionEmploye.view.UserControls
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(999, 614);
+            this.dataGridView1.Size = new System.Drawing.Size(735, 523);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // id
             // 
@@ -294,6 +313,21 @@ namespace GestionEmploye.view.UserControls
             this.Password.ReadOnly = true;
             this.Password.Width = 125;
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Coral;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button6.Location = new System.Drawing.Point(164, 144);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(90, 23);
+            this.button6.TabIndex = 3;
+            this.button6.Text = "Clear ID";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // RH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -317,11 +351,11 @@ namespace GestionEmploye.view.UserControls
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox passwordBox;
+        private System.Windows.Forms.TextBox loginBox;
+        private System.Windows.Forms.TextBox prenomBox;
+        private System.Windows.Forms.TextBox nomBox;
+        private System.Windows.Forms.TextBox idBox;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button5;
@@ -334,5 +368,6 @@ namespace GestionEmploye.view.UserControls
         private System.Windows.Forms.DataGridViewTextBoxColumn Prenom;
         private System.Windows.Forms.DataGridViewTextBoxColumn Login;
         private System.Windows.Forms.DataGridViewTextBoxColumn Password;
+        private System.Windows.Forms.Button button6;
     }
 }

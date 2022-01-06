@@ -46,7 +46,7 @@ namespace GestionEmploye.controller
                 pointageModel pointage;
                 while (rd.Read())
                 {
-                    pointage = new pointageModel((int)rd[0], (float)rd[1], (int)rd[2], (int)rd[3],rd[4].ToString());
+                    pointage = new pointageModel((int)rd[0], float.Parse(rd[1].ToString()), int.Parse(rd[2].ToString()), int.Parse(rd[3].ToString()),rd[4].ToString());
 
                     myList.Add(pointage);
                 }

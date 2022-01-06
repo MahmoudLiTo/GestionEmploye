@@ -116,11 +116,10 @@ namespace GestionEmploye.view.UserControls
 
 
         }
-        int position = -1;
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            position = dataGridView1.CurrentRow.Index;
+            int position = dataGridView1.CurrentRow.Index;
             idBox.Text = dataGridView1.Rows[position].Cells[0].Value.ToString();
             nomBox.Text = dataGridView1.Rows[position].Cells[1].Value.ToString();
             prenomBox.Text = dataGridView1.Rows[position].Cells[2].Value.ToString();

@@ -366,6 +366,25 @@ namespace GestionEmploye.controller
             return grade;
 
         }
+        public employeModel searchemploye(int i)
+        {
+            string query = "select * from employe where id =" + i + ";";
+            SqlCommand cmd = new SqlCommand(query, cnx);
+            employeModel emp;
+            if (cnx.State == System.Data.ConnectionState.Open)
+            {
+                cnx.Close();
+            }
+            cnx.Open();
+            SqlDataReader rd = cmd.ExecuteReader();
+            rd.Read();
+            emp = new employeModel((int)rd[0], rd[1].ToString(), rd[2].ToString(), rd[4].ToString(), rd[5].ToString(), (int)rd[6], (int)rd[7], rd[3].ToString());
+
+            cnx.Close();
+            return emp;
+
+
+        }
 
 
 
