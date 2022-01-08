@@ -31,7 +31,7 @@ namespace GestionEmploye.view
 
         private void button3_Click(object sender, EventArgs e)
         {
-            login b = new login("Employé");
+            login b = new login("employé");
             this.Hide();
             b.Show();
         }

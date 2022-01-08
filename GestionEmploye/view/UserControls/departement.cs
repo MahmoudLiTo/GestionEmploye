@@ -24,7 +24,9 @@ namespace GestionEmploye.view.UserControls
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            int position = dataGridView1.CurrentRow.Index;
+            textBox1.Text = dataGridView1.Rows[position].Cells[0].Value.ToString();
+            textBox5.Text = dataGridView1.Rows[position].Cells[1].Value.ToString();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -100,6 +102,8 @@ namespace GestionEmploye.view.UserControls
         {
             controllerUsers db = new controllerUsers();
             db.deleteDepartement(int.Parse(textBox1.Text));
+            MessageBox.Show("ligne supprimée");
+
         }
     }
 }

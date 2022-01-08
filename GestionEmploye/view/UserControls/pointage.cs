@@ -65,10 +65,11 @@ namespace GestionEmploye.view.UserControls
 
         private void pointage_Load(object sender, EventArgs e)
         {
+
             controllerUsers db = new controllerUsers();
             List<employeModel> myemployelist = db.listEmploye();
             comboBox2.Items.Clear();
-            foreach(employeModel emp in myemployelist)
+            foreach (employeModel emp in myemployelist)
             {
                 comboBox2.Items.Add(emp.Id);
             }
@@ -172,6 +173,11 @@ namespace GestionEmploye.view.UserControls
         private void button6_Click(object sender, EventArgs e)
         {
             idBox.Text = "";
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

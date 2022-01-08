@@ -18,7 +18,7 @@ namespace GestionEmploye
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new view.employe.indexEmploye());
+            Application.Run(new view.index());
         }
     }
 }

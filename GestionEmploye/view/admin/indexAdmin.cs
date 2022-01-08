@@ -16,10 +16,23 @@ namespace GestionEmploye.view.admin
 {
     public partial class indexAdmin : Form
     {
+        string user;
         public indexAdmin()
         {
+            
             InitializeComponent();
+
         }
+        public indexAdmin(string user)
+        {
+            this.user = user;
+            InitializeComponent();
+            employe1.Hide();
+            departement1.Hide();
+            grade1.Hide();
+            rh1.Hide();
+        }
+
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -28,7 +41,12 @@ namespace GestionEmploye.view.admin
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            employe1.employe_Load(sender,e);
+            employe1.Show();
+            departement1.Hide();
+            grade1.Hide();
+            rh1.Hide();
+            employe1.BringToFront();
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -53,22 +71,61 @@ namespace GestionEmploye.view.admin
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            employe1.Hide();
+            departement1.Hide();
+            grade1.Hide();
+            rh1.Show();
+            rh1.BringToFront();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            employe1.Hide();
+            departement1.Hide();
+            grade1.Show();
+            rh1.Hide();
+            grade1.BringToFront();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            employe1.Hide();
+            departement1.Show();
+            grade1.Hide();
+            rh1.Hide();
+            departement1.BringToFront();
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void indexAdmin_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            index i = new index();
+            i.Show();
         }
     }
 }

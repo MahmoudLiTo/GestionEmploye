@@ -72,13 +72,13 @@ namespace GestionEmploye.view.UserControls
             this.Password,
             this.tpheur,
             this.date});
-            this.dataGridView1.Location = new System.Drawing.Point(18, 0);
+            this.dataGridView1.Location = new System.Drawing.Point(-13, 0);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(717, 523);
+            this.dataGridView1.Size = new System.Drawing.Size(757, 523);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -182,6 +182,7 @@ namespace GestionEmploye.view.UserControls
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(246, 523);
             this.panel1.TabIndex = 5;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // comboBox2
             // 
@@ -208,7 +209,7 @@ namespace GestionEmploye.view.UserControls
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 201);
+            this.label2.Location = new System.Drawing.Point(13, 204);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 15);
             this.label2.TabIndex = 5;
@@ -220,7 +221,7 @@ namespace GestionEmploye.view.UserControls
             this.checkBox1.AutoSize = true;
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(107, 252);
+            this.checkBox1.Location = new System.Drawing.Point(107, 257);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(123, 19);
             this.checkBox1.TabIndex = 4;
@@ -231,7 +232,7 @@ namespace GestionEmploye.view.UserControls
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(23, 226);
+            this.label7.Location = new System.Drawing.Point(49, 232);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(37, 15);
             this.label7.TabIndex = 2;
@@ -241,7 +242,7 @@ namespace GestionEmploye.view.UserControls
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 177);
+            this.label6.Location = new System.Drawing.Point(10, 176);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(78, 15);
             this.label6.TabIndex = 2;
@@ -250,7 +251,7 @@ namespace GestionEmploye.view.UserControls
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 147);
+            this.label5.Location = new System.Drawing.Point(10, 148);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 15);
             this.label5.TabIndex = 2;
@@ -259,11 +260,11 @@ namespace GestionEmploye.view.UserControls
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 120);
+            this.label1.Location = new System.Drawing.Point(59, 120);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 15);
+            this.label1.Size = new System.Drawing.Size(24, 15);
             this.label1.TabIndex = 2;
-            this.label1.Text = "ID:";
+            this.label1.Text = "ID :";
             // 
             // dateBox
             // 
@@ -276,7 +277,7 @@ namespace GestionEmploye.view.UserControls
             // 
             // nbhBox
             // 
-            this.nbhBox.Location = new System.Drawing.Point(92, 174);
+            this.nbhBox.Location = new System.Drawing.Point(92, 173);
             this.nbhBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nbhBox.Name = "nbhBox";
             this.nbhBox.Size = new System.Drawing.Size(138, 23);
@@ -297,10 +298,10 @@ namespace GestionEmploye.view.UserControls
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button4.Location = new System.Drawing.Point(3, 46);
+            this.button4.Location = new System.Drawing.Point(3, 476);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(259, 45);
+            this.button4.Size = new System.Drawing.Size(243, 45);
             this.button4.TabIndex = 0;
             this.button4.Text = "Delete";
             this.button4.UseVisualStyleBackColor = false;
@@ -312,10 +313,10 @@ namespace GestionEmploye.view.UserControls
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Location = new System.Drawing.Point(3, 416);
+            this.button3.Location = new System.Drawing.Point(3, 427);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(259, 45);
+            this.button3.Size = new System.Drawing.Size(243, 45);
             this.button3.TabIndex = 0;
             this.button3.Text = "Update";
             this.button3.UseVisualStyleBackColor = false;
@@ -327,7 +328,7 @@ namespace GestionEmploye.view.UserControls
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button5.Location = new System.Drawing.Point(140, 294);
+            this.button5.Location = new System.Drawing.Point(140, 281);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(90, 23);
@@ -342,10 +343,10 @@ namespace GestionEmploye.view.UserControls
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(3, 371);
+            this.button2.Location = new System.Drawing.Point(3, 378);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(259, 45);
+            this.button2.Size = new System.Drawing.Size(243, 45);
             this.button2.TabIndex = 0;
             this.button2.Text = "Add";
             this.button2.UseVisualStyleBackColor = false;
@@ -357,10 +358,10 @@ namespace GestionEmploye.view.UserControls
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(3, 1);
+            this.button1.Location = new System.Drawing.Point(3, 14);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(259, 45);
+            this.button1.Size = new System.Drawing.Size(243, 45);
             this.button1.TabIndex = 0;
             this.button1.Text = "List";
             this.button1.UseVisualStyleBackColor = false;

@@ -80,5 +80,31 @@ namespace GestionEmploye.controller
             cmd.ExecuteNonQuery();
             cnx.Close();
         }
+        public List<pointageModel> searchPointage(int i)
+        {
+            List<pointageModel> myList = new List<pointageModel>();
+            string query = "select * from pointage where idEmploye = "+ i +";";
+            SqlCommand cmd = new SqlCommand(query, cnx);
+
+            if (cnx.State == System.Data.ConnectionState.Open)
+            {
+                cnx.Close();
+            }
+            cnx.Open();
+            SqlDataReader rd = cmd.ExecuteReader();
+            if (rd.HasRows)
+            {
+                pointageModel pointage;
+                while (rd.Read())
+                {
+                    pointage = new pointageModel((int)rd[0], float.Parse(rd[1].ToString()), int.Parse(rd[2].ToString()), int.Parse(rd[3].ToString()), rd[4].ToString());
+
+                    myList.Add(pointage);
+                }
+            }
+            cnx.Close();
+            return myList;
+        }
     }
+
 }

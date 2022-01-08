@@ -53,7 +53,7 @@ namespace GestionEmploye.view.UserControls
 
 
 
-            db.updateEmploye(new employeModel(int.Parse(idBox.Text.Trim()), nomBox.Text.Trim(), prenomBox.Text.Trim(), loginBox.Text.Trim(), passwordBox.Text.Trim(), mygradelist[gradeBox.SelectedIndex-1].Id, mydepartementlist[departementBox.SelectedIndex-1].Id, matriculeBox.Text.Trim()));
+            db.updateEmploye(new employeModel(int.Parse(idBox.Text.Trim()), nomBox.Text.Trim(), prenomBox.Text.Trim(), loginBox.Text.Trim(), passwordBox.Text.Trim(), mygradelist[gradeBox.SelectedIndex].Id, mydepartementlist[departementBox.SelectedIndex].Id, matriculeBox.Text.Trim()));
             MessageBox.Show("ligne modifiée");
         }
 
@@ -98,7 +98,7 @@ namespace GestionEmploye.view.UserControls
 
         }
         
-        private void employe_Load(object sender, EventArgs e)
+        public void employe_Load(object sender, EventArgs e)
         {
             controllerUsers db = new controllerUsers();
             List<gradeModel> mygradelist = db.listGrade();
@@ -113,6 +113,9 @@ namespace GestionEmploye.view.UserControls
             {
                 departementBox.Items.Add(depar.Nom);
             }
+
+
+
 
 
         }
